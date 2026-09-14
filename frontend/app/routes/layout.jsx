@@ -1,13 +1,12 @@
 import { Outlet } from "react-router";
 
-export default function Layout() {
+function Sidebar() {
   return (
-    <div className="app-layout">
-      <aside className="sidebar">
-        {/* Sidebar header */}
-        <div className="sidebar-header">
-          <h2 className="chatbot-title">Chatbot</h2>
-          <a href="/chat/new" className="new-chat-btn">
+    <aside className="sidebar">
+      {/* Sidebar header */}
+      <div className="sidebar-header">
+        <h2 className="chatbot-title">Chatbot</h2>
+        <a href="/chat/new" className="new-chat-btn">
             + New
           </a>
         </div>
@@ -121,6 +120,15 @@ export default function Layout() {
           </a>
         </div>
       </aside>
+    
+  );
+}
+
+
+export default function Layout() {
+  return (
+    <div className="app-layout">
+      <Sidebar />
       <main className="main-content">
         <Outlet />
       </main>
