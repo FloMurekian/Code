@@ -1,5 +1,5 @@
-import ChatInput from "../components/ChatInput.jsx"
-import ChatMessages from "../components/ChatMessages.jsx"
+import { ChatMessages, ChatInput } from "../components/Chat.jsx";
+
 
 export default function Home() {
   return (

@@ -1,6 +1,30 @@
-import Message from "./Message.jsx";
+  export function ChatInput() {
+    return (
+      <div className="chat-input-container">
+        <div className="chat-input-wrapper">
+          <textarea
+            className="chat-input"
+            placeholder="Type your message here..."
+            rows="1"
+          />
+          <button className="send-button" type="button">
+            Send
+          </button>
+        </div>
+      </div>
+    );
+  }
 
-export default function ChatMessages() {
+export function Message(props) {
+    return (
+    <div className={`message ${props.sender}-message`}>
+      <div className="message-content">{props.content}</div>
+    </div>
+  );
+}
+
+
+export function ChatMessages() {
   return (
     <div className="chat-messages">
       {/* Chat message */}
@@ -34,3 +58,4 @@ export default function ChatMessages() {
 </div>
   )
 }
+
