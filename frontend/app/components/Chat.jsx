@@ -24,7 +24,8 @@ export function Message(props) {
 }
 
 
-export function ChatMessages() {
+function ChatMessages(props) {
+
   return (
     <div className="chat-messages">
       {/* Chat message */}
